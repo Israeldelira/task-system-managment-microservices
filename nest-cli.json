@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/task_maganment/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/task_maganment/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/task_maganment",
+  "projects": {
+    "task_maganment": {
+      "type": "application",
+      "root": "apps/task_maganment",
+      "entryFile": "main",
+      "sourceRoot": "apps/task_maganment/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/task_maganment/tsconfig.app.json"
+      }
+    },
+    "user-service": {
+      "type": "application",
+      "root": "apps/user-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/user-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/user-service/tsconfig.app.json"
+      }
+    },
+    "task-service": {
+      "type": "application",
+      "root": "apps/task-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/task-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/task-service/tsconfig.app.json"
+      }
+    }
+  }
+}
